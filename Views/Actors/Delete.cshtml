@@ -1,0 +1,11 @@
+﻿@model Fall2024_Assignment3_akspencer1.Models.Actor
+
+<form asp-action="Delete" method="post" onsubmit="return confirm('Are you sure you want to delete this Actor?');" class="mb-4">
+    <h4>Enter Actor Name to Delete</h4>
+    <div class="form-group">
+        <label for="Name">Actor Name</label>
+        <input type="text" name="name" class="form-control" placeholder="Enter the Name of the actor" required />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>

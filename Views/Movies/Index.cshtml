@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Fall2024_Assignment3_akspencer1.Models.Movie>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/wwwroot/css/site.css">
+    <script src="/wwwroot/js/site.js"></script>
+
+</head>
+<body>
+
+
+    <div>
+        <h1 id="Title"> Movies Page </h1>
+
+        <p id="Summary"> This is the movies library. Click on the details button for a movie to see more information. </p>
+        <br /> <br />
+        <button class="btn btn-primary" onclick="goToCreateView()">Create New Movie</button>
+        <br /> <br />
+        <button class="btn btn-primary" onclick="goToDeleteView()">Delete Movie</button>
+        <br /> <br />
+        <button class="btn btn-primary" onclick="goToEditView()">Edit Movie</button>
+        <br /> <br />
+        <button class="btn btn-primary" onclick="goToAddActorsView() ">Manage Movie's Actors</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Movie</th>
+                    <th>Poster</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var movie in Model)
+                {
+                    <tr>
+                        <td>@movie.Title</td>
+                        <td>
+                            <img src="@movie.PosterUrl" alt="Poster for @movie.Title" width="100" height="150" />
+                        </td>
+                        <td><button class="btn btn-primary" onclick="goToDetailsView('@movie.Title')">See Details</button></td>
+
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+    </div>
+</body>

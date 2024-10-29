@@ -1,0 +1,57 @@
+﻿@model Fall2024_Assignment3_akspencer1.Models.MovieReviews
+
+<body>
+    <link rel="stylesheet" href="/wwwroot/css/site.css">
+    <script src="/wwwroot/js/site.js"></script>
+    <div>
+        <h1>Generate Actors Tweets</h1>
+        <br />
+
+        @if (Model == null) // If the movie is not found
+        {
+            <h4>Please enter a valid Actor.</h4>
+            <form asp-action="FindActor" method="post" class="mb-4">
+                <div class="form-group">
+                    <label for="name">Enter Actor Name:</label>
+                    <input type="text" id="name" name="Name" class="form-control" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Find Actor</button>
+            </form>
+        }
+        else
+        {
+            <h2>@Model.ActorName</h2>
+            @if (Model.Sentiment != null)
+            {
+                <h2> Sentiment </h2>
+                <ul>
+                    <li> @Model.Sentiment </li>
+                </ul>
+            }
+
+            <form asp-action="GenerateTweets" method="post">
+                <input type="hidden" name="Name" value="@Model.ActorName" />
+                <button type="submit" class="btn btn-primary">Generate Tweets</button>
+            </form>
+
+            @if (Model.Tweets != null && Model.Tweets.Any()) // Check if there are any reviews generated
+            {
+                <h1>AI Generated Tweets:</h1>
+                <ul>
+                    @foreach (var tweet in Model.Tweets)
+                    {
+                        <li>@tweet</li>
+                    }
+                </ul>
+            }
+        
+
+
+
+        else
+            { <h1>No Generated Tweets</h1>}
+
+        }
+        <a asp-action="Index">Back to List</a>
+    </div>
+</body>

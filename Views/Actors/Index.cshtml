@@ -1,0 +1,59 @@
+﻿@model IEnumerable<Fall2024_Assignment3_akspencer1.Models.Actor>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="/wwwroot/css/site.css">
+    <script src="/wwwroot/js/site.js"></script>
+
+</head>
+<body>
+    <!----Navigation Bar (a defines a hyperlink)-->
+
+    <div>
+        <h1 id="Title"> Actors Page </h1>
+        <br /> <br />
+        <p id="Summary"> You made it to the Actors page. Click the buttons to create, delete, edit and manage actors. </p>
+        <br /> <br />
+        <button class="btn btn-primary" onclick="goToCreateActorView()">Create New Actor</button>
+        <button class="btn btn-primary" onclick="goToDeleteActorView()">Delete Actor</button>
+        <button class="btn btn-primary" onclick="goToEditActorView()">Edit Actor</button>
+        <button class="btn btn-primary" onclick="goToManageMovieView()">Manage Actor's Movies</button>
+        <br /> <br />
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>IMDBLink</th>
+                    <th>Gender</th>
+                    <th>Age</th>
+                    <th>Photo</th>
+                    <th>Movies</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var Actor in Model)
+                {
+                    <tr>
+                        <td>@Actor.Name</td>
+                        <td>@Actor.ImdbLink</td>
+                        <td>@Actor.Gender</td>
+                        <td>@Actor.Age</td>
+                        <td>
+                            <img src="@Actor.PhotoUrl" alt="Photo for @Actor.Name" width="100" height="150" />
+                        </td>
+                        <td>
+                            @foreach (var movie in Actor.Movies)
+                            {
+                                @movie.Title<br />
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+
+
+    </div>
+</body>

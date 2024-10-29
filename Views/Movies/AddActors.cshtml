@@ -1,0 +1,39 @@
+﻿@model Fall2024_Assignment3_akspencer1.Models.Movie
+
+    <body>
+        <div>
+            <h1>Add Actor to Movie</h1>
+            <br />
+
+            @if (Model == null) // If the movie is not found
+            {
+                <h4>Please enter a valid title to add an actor.</h4>
+                <form asp-action="FindMovieforActor" method="post" class="mb-4">
+                    <div class="form-group">
+                        <label for="title">Enter Movie Title:</label>
+                        <input type="text" id="title" name="Title" class="form-control" required />
+                    </div>
+                    <button type="submit" class="btn btn-primary">Find Movie</button>
+                </form>
+            }
+            else // If the movie is found
+            {
+                <form asp-action="AddActor" method="post" class="mb-4">
+                    <input type="hidden" name="title" value="@Model.Title" />
+
+                    <div class="form-group">
+                        <label for="actorName">Enter Actor Name:</label>
+                        <input type="text" id="actorName" name="actorName" class="form-control" required />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Add Actor</button>
+                </form>
+
+                <hr />
+
+              
+            }
+
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </body>

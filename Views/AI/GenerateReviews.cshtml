@@ -1,0 +1,62 @@
+﻿@model Fall2024_Assignment3_akspencer1.Models.MovieReviews
+
+<body>
+    <link rel="stylesheet" href="/wwwroot/css/site.css">
+    <script src="/wwwroot/js/site.js"></script>
+    <div>
+        <h1>Generate Movie Reviews</h1>
+        <br />
+
+        @if (Model == null) // If the movie is not found
+        {
+            <h4>Please enter a valid title to add an actor.</h4>
+            <form asp-action="FindMovie" method="post" class="mb-4">
+                <div class="form-group">
+                    <label for="title">Enter Movie Title:</label>
+                    <input type="text" id="title" name="Title" class="form-control" required />
+                </div>
+                <button type="submit" class="btn btn-primary">Find Movie</button>
+            </form>
+        }
+        else
+        {
+
+
+
+            <h2>@Model.MovieTitle</h2>
+
+
+            <form asp-action="GenerateReviews" method="post">
+                <input type="hidden" name="Title" value="@Model.MovieTitle" />
+                <button type="submit" class="btn btn-primary">Generate Reviews</button>
+            </form>
+
+            @if (Model.Sentiment != null)
+            {
+                <h2> Sentiment </h2>
+                <ul>
+                    <li> @Model.Sentiment </li>
+                </ul>
+            }
+            @if (Model.Reviews != null && Model.Reviews.Any()) // Check if there are any reviews generated
+            {
+                <h1>AI Generated Reviews:</h1>
+                <ul>
+                    @foreach (var review in Model.Reviews)
+                    {
+                        <li>@review</li>
+                    }
+
+
+
+                </ul>
+            }
+            else
+            { <h1>Click Generate Review To Generate.</h1>}
+
+
+
+        }
+        <a asp-action="Index">Back to List</a>
+    </div>
+</body>

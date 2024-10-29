@@ -1,0 +1,60 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>aspnet-Fall2024_Assignment3_akspencer1-7f65a872-b49f-41be-a53d-63bee58ca75f</UserSecretsId>
+    <RootNamespace>Fall2024_Assignment3_akspencer1</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Views\Movies\" />
+    <None Remove="Views\Actors\" />
+    <None Remove="Views\AI\" />
+    <None Remove="Views\AI\Index.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Images\Ghosts.jpeg" />
+    <None Include="wwwroot\Images\images.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="7.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="7.0.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.20" />
+    <PackageReference Include="Azure.AI.OpenAI" Version="2.0.0" />
+    <PackageReference Include="VaderSharp2" Version="3.3.2.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.20" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="7.0.20" />
+    <PackageReference Include="NSwag.ApiDescription.Client" Version="13.0.5">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.ApiDescription.Client" Version="3.0.0">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Views\Movies\" />
+    <Folder Include="Views\Actors\" />
+    <Folder Include="Views\AI\" />
+    <Folder Include="wwwroot\Images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Data\OpenAI.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Images\Ghosts.jpeg" />
+    <Content Remove="wwwroot\Images\images.jpeg" />
+    <Content Remove="wwwroot\Images\" />
+  </ItemGroup>
+</Project>
