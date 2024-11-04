@@ -7,7 +7,9 @@
 /Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/PubTmp/Out/Fall2024-Assignment3-akspencer1.pdb
 /Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/PubTmp/Out/Azure.AI.OpenAI.dll
 /Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/PubTmp/Out/Azure.Core.dll
+/Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/PubTmp/Out/Azure.Extensions.AspNetCore.Configuration.Secrets.dll
 /Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/PubTmp/Out/Azure.Identity.dll
+/Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/PubTmp/Out/Azure.Security.KeyVault.Secrets.dll
 /Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/PubTmp/Out/Humanizer.dll
 /Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/PubTmp/Out/Microsoft.AspNetCore.Cryptography.Internal.dll
 /Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/PubTmp/Out/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll

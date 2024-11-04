@@ -89,3 +89,5 @@
 /Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/Fall2024-Assignment3-akspencer1.pdb
 /Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/Fall2024-Assignment3-akspencer1.genruntimeconfig.cache
 /Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/obj/Release/net7.0/ref/Fall2024-Assignment3-akspencer1.dll
+/Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/bin/Release/net7.0/Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+/Users/anastasiaspencer/Projects/Fall2024-Assignment3-akspencer1/Fall2024-Assignment3-akspencer1/bin/Release/net7.0/Azure.Security.KeyVault.Secrets.dll
