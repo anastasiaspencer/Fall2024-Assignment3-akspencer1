@@ -1,0 +1,195 @@
+﻿/* Body styles */
+body {
+    background-color: #2E1A47; 
+    color: #ff7518; 
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Heading styles */
+h1 {
+    font-family: 'Creepster', sans-serif;
+    font-size: 3em;
+    color: #ff7518;
+    text-shadow: 3px 3px 5px black;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: orange;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: darkorange;
+}
+
+/* List styles */
+li {
+    text-align: center;
+    margin-bottom: 30px;
+    color: lawngreen;
+}
+
+/* Datalist styles */
+datalist {
+    text-align: center;
+    margin-bottom: 30px;
+    color: lawngreen;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border: 2px dashed orange;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 30px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    color: lawngreen;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #BF5700;
+    color: #E1A52D;
+}
+
+/* Image styles */
+img {
+    border-radius: 30px;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5)); /* Add a shadow effect */
+}
+
+/* Form styles */
+form.mb-4 {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #666;
+    border-radius: 8px;
+    background-color: purple;
+    color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+    /* Label styles */
+    .form-group label {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+        display: block;
+        color: orange;
+    }
+
+    /* Input styles */
+    .form-group input.form-control {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #666;
+        border-radius: 4px;
+        background-color: #444;
+        color: lawngreen;
+        font-size: 16px;
+    }
+
+    /* Placeholder styles */
+    .form-group input::placeholder {
+        color: #bbb;
+    }
+
+/* Validation message styles */
+.text-danger {
+    color: lawngreen;
+    font-size: 0.875rem;
+}
+
+/* Button styles */
+.btn-primary {
+    background-color: orange;
+    color: black;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-primary:hover {
+        background-color: darkorange;
+    }
+
+.form-group input.form-control:hover {
+    border-color: orange;
+    box-shadow: 0 0 5px rgba(255, 165, 0, 0.5);
+}
+
+/* Summary styles */
+#Summary {
+    text-align: center;
+    font-size: 20px;
+    color: lawngreen;
+    font-family: 'Creepster', sans-serif;
+}
+
+/* Container styles */
+.container {
+    padding: 20px;
+    border: 3px solid #ff7518;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.8);
+    max-width: 800px;
+    margin: auto;
+    background-color: #1e1e1e;
+}
+
+/* Image icon styles */
+.image-icon {
+    width: 60px; /* Adjusted width */
+    margin: 10px;
+}
+
+/* Link styles */
+a {
+    color: orange; /* #ff7518; */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    a:hover {
+        color: #ffea00;
+        text-shadow: 2px 2px black;
+    }
+
+/* Navbar customizations */
+.navbar-custom {
+    background-color: #ff8c00;
+    font-family: sans-serif;
+    border-bottom: 5px solid #2f2f2f;
+}
+
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+        color: black;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+        /* Yellow on Hover */
+        .navbar-custom .nav-link:hover {
+            color: #f0e68c !important;
+        }
+
+    .navbar-custom .navbar-toggler {
+        border-color: #2f2f2f;
+    }

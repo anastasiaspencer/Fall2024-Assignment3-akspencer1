@@ -15,8 +15,8 @@ namespace Fall2024_Assignment3_akspencer1.Controllers
         private readonly ApplicationDbContext _context; //Represents the session with the database and is used to
         //interact with the data
 
-        private readonly string apiUrl = "https://fall2024-assignment3-json10-openai.openai.azure.com/openai/deployments/gpt-35-turbo/chat/completions?api-version=2024-08-01-preview";
-        private readonly string apiKey = "01837e74cf2a4eb08a3291b1a3732c34";
+        private readonly string apiUrl = "https://fall2024-akspencer1-openai.openai.azure.com/openai/deployments/gpt-35-turbo/chat/completions?api-version=2024-08-01-preview";
+        private readonly string apiKey = "621a53b06eaa453396b06be276cbc4e4";
         private readonly ILogger<AIController> _logger;
 
     
